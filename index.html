@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Angular UI</title>
+	<style>
+	.ui-match{
+		background-color: lightBlue;
+		color:darkBlue;
+	}
+
+	</style>
+	<script type="text/javascript" src="public/lib/angular/angular.min.js"></script>
+	<script type="text/javascript" src="public/lib/angular-ui-utils/ui-utils.min.js"></script>
+	<script type="text/javascript" src="public/lib/angular-sanitize/angular-sanitize.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-controller="MainController">
+<textarea  ng-model="text"></textarea>
+<br/>
+<input type="text" ng-model="srch">
+<p ng-bind-html="text|highlight:srch:true"></p>
+<!-- for case sensitive use true-->
+</body>
+</html>
